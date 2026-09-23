@@ -2,13 +2,13 @@
 <html lang="ar" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KE8K7PZ1G6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KE8K7PZ1G6');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE8K7PZ1G6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KE8K7PZ1G6');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -177,13 +177,15 @@
         /* Navigation */
         nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 10px 5%; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 15px rgba(0,0,0,0.05); height: 80px; }
         .nav-logo img { height: 60px; border-radius: 8px; object-fit: contain; }
-        .nav-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; align-items: center; }
-        .nav-links a { color: var(--navy); font-weight: 700; font-size: 15px; transition: var(--transition); }
+        .nav-links { display: flex; gap: 15px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: var(--navy); font-weight: 700; font-size: 14px; transition: var(--transition); }
         .nav-links a:hover { color: var(--sky); }
         .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 6px; z-index: 1001; }
         .menu-toggle span { display: block; width: 30px; height: 4px; background-color: var(--navy); border-radius: 2px; transition: var(--transition); }
 
-        /* Buttons */
+        /* Buttons & Language */
+        .lang-btn { border: 2px solid var(--sky); color: var(--navy); background: var(--white); padding: 5px 12px; border-radius: 8px; font-weight: 700; font-size: 13px; transition: var(--transition); }
+        .lang-btn:hover { background: var(--sky); color: var(--white); }
         .nav-cta { background: var(--blue); color: var(--white); padding: 10px 20px; border-radius: 8px; font-weight: 700; font-size: 15px; box-shadow: 0 5px 0 #0a58ca, 0 10px 15px rgba(13,110,253,0.3); display: inline-block; }
         .nav-cta:hover { background: #0b5ed7; transform: translateY(-2px); box-shadow: 0 7px 0 #0a58ca, 0 12px 20px rgba(13,110,253,0.4); color: white;}
         .nav-cta:active { transform: translateY(3px); box-shadow: 0 2px 0 #0a58ca; }
@@ -234,13 +236,6 @@
         .service-card:hover { transform: translateY(-10px); border-color: var(--sky); }
         .service-icon { width: 80px; height: 80px; border-radius: 20px; background: var(--light); color: var(--sky); display: flex; align-items: center; justify-content: center; font-size: 35px; margin: 0 auto 20px; }
 
-        .gallery-card { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4/3; box-shadow: var(--shadow); cursor: pointer; }
-        .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-        .gallery-card:hover img { transform: scale(1.1); }
-        .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,37,64,0.9), transparent); opacity: 0.85; transition: var(--transition); display: flex; flex-direction: column; justify-content: flex-end; padding: 25px; }
-        .gallery-card:hover .gallery-overlay { opacity: 1; }
-        .gallery-overlay h3 { color: var(--white); font-size: 20px; font-weight: 700; }
-
         /* Pricing */
         .pricing-phase { max-width: 1200px; margin: 0 auto 60px; background: var(--white); border-radius: 24px; padding: 40px; box-shadow: var(--shadow); border-top: 5px solid var(--sky); }
         .pricing-phase h3 { font-size: 28px; color: var(--navy); margin-bottom: 15px; font-weight: 900; text-align: center;}
@@ -264,11 +259,6 @@
         .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 500px; }
 
         /* Social Floats */
-        .social-btn-3d { display: inline-flex; align-items: center; justify-content: center; width: 75px; height: 75px; border-radius: 50%; color: var(--white); margin: 0 15px; transition: all 0.2s ease; }
-        .social-btn-3d svg { width: 40px; height: 40px; fill: currentColor; }
-        .btn-wa { background-color: var(--wa-color); box-shadow: 0 6px 0 #1da851; }
-        .btn-wa:hover { transform: translateY(-5px); }
-        
         .whatsapp-float { position: fixed; bottom: 30px; left: 30px; background: linear-gradient(135deg, #25D366, #128C7E); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; box-shadow: 0 6px 0 #0f7367; z-index: 999; transition: transform 0.2s; }
         .whatsapp-float svg { width: 34px; height: 34px; fill: currentColor; }
         .whatsapp-float:hover { transform: translateY(-5px); }
@@ -279,11 +269,11 @@
 
         footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 40px 20px; font-size: 15px; }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             nav { padding: 15px 20px; }
             .nav-logo img { height: 45px; }
             .menu-toggle { display: flex; }
-            .nav-links { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--white); flex-direction: column; align-items: flex-start; padding: 80px 20px 30px; transition: right 0.4s ease-in-out; }
+            .nav-links { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--white); flex-direction: column; align-items: flex-start; padding: 80px 20px 30px; transition: right 0.4s ease-in-out; box-shadow: -5px 0 15px rgba(0,0,0,0.1); }
             .nav-links.active { right: 0; } 
             .nav-links li { width: 100%; border-bottom: 1px solid rgba(0,0,0,0.05); }
             .nav-links a { display: block; padding: 15px 10px; width: 100%; }
@@ -303,13 +293,16 @@
     <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
     <ul class="nav-links" id="nav-links">
         <li><a href="#about">عن المركز</a></li>
-        <li><a href="#services">خدمات ديتوكس والتأهيل</a></li>
-        <li><a href="#pricing">أسعار علاج الإدمان</a></li>
+        <li><a href="#services">خدماتنا</a></li>
+        <li><a href="#facilities">المرافق</a></li>
+        <li><a href="#activities">الأنشطة</a></li>
+        <li><a href="#pricing">أسعار برامجنا</a></li>
         <li><a href="#faq">الأسئلة الشائعة</a></li>
         <li><a href="https://blog.horryeafreedom.center/" target="_blank" style="color: var(--sky);">المدونة الطبية</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
+        <li><a href="en/index.html" class="lang-btn">English</a></li>
     </ul>
-    <a href="https://wa.me/+201211117075" class="nav-cta" target="_blank">احجز استشارتك السرية</a>
+    <a href="https://wa.me/+201211117075" class="nav-cta" target="_blank">احجز استشارتك</a>
 </nav>
 
 <div class="ticker-wrapper" dir="ltr">
@@ -369,17 +362,17 @@
     </div>
     <div class="grid-3">
         <div class="service-card" data-aos="fade-up">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+            <div class="service-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
             <h3 style="color: var(--navy); margin-bottom:10px;">سحب السموم (ديتوكس)</h3>
             <p style="color: var(--gray);">برنامج طبي مكثف وآمن لتمرير فترة الأعراض الانسحابية بدون ألم نهائياً.</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="service-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
             <h3 style="color: var(--navy); margin-bottom:10px;">التأهيل النفسي والسلوكي</h3>
             <p style="color: var(--gray);">بصفتنا أفضل مصحة للعلاج النفسي، نقدم جلسات العلاج المعرفي السلوكي (CBT).</p>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+            <div class="service-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
             <h3 style="color: var(--navy); margin-bottom:10px;">عيادات الرعاية اللاحقة</h3>
             <p style="color: var(--gray);">أفضل عيادات لعلاج الإدمان للمتابعة الدورية بعد التعافي لضمان عدم الانتكاسة.</p>
         </div>
@@ -445,7 +438,7 @@
     </div>
 </section>
 
-<!-- قسم الأسئلة الشائعة الجديد (مُحسّن للـ SEO و AEO) -->
+<!-- قسم الأسئلة الشائعة -->
 <section id="faq" class="faq-section">
     <div class="section-header" data-aos="fade-up">
         <span class="section-tag">أسئلة تهمك</span>
@@ -510,8 +503,8 @@
 
 <!-- أزرار التواصل العائمة -->
 <a href="https://wa.me/+201211117075" class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">
-  <svg viewBox="0 0 16 16">
-    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+  <svg width="24" height="24" viewBox="0 0 16 16">
+    <path fill="currentColor" d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
   </svg>
 </a>
 
@@ -536,4 +529,4 @@
   });
 </script>
 </body>
-</html>   
+</html>
